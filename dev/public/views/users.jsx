@@ -14,12 +14,12 @@ module.exports = React.createClass({
     return (
       <div id='account'>
         <h1>{this.props.name}</h1>
-        <h6>Welcome to my Base ReactJS app!</h6>
-        <button onClick={this.onButtonClick}>Click me for some fun...</button>
+        <h6>Welcome to my Users Page!</h6>
+        
         <br />
         <br />
-        <a href='/some_unknown'>This is an unhadled route</a>
-        <Link to='users'>Go to users (handled)</Link>
+        <a href='/'>go back to index (unahandled)</a>
+        <Link to='/'>go back home</Link>
       </div>
     );
   }

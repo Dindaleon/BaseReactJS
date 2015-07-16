@@ -28,11 +28,9 @@ app.set('view engine', 'jsx');
 // finally, set the custom view
 app.set('view', renderer.expressView);
 
-//expose public folder as static assets
-//app.use('/public', express.static('public'));
-
-  // Prevent static files to rerouted thorugh react-router
-  app.use('/public',express.static(__dirname + '/public'));
+// Expose public folder as static assets
+// Prevent static files to rerouted thorugh react-router
+app.use('/public',express.static(__dirname + '/public'));
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
