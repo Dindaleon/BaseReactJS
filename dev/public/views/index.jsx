@@ -19,6 +19,8 @@ module.exports = React.createClass({
         <br />
         <br />
         <a href='/some_unknown'>This is an unhadled route</a>
+        <br />
+        <br />
         <Link to='users'>Go to users (handled)</Link>
       </div>
     );
