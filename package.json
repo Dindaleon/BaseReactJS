@@ -1,0 +1,60 @@
+{
+  "name": "BaseReactJS",
+  "version": "0.0.1",
+  "description": "Base Structure for React App (NodeJS + Express + react-router + react-engine + jsx views + babel es6 + webpack).",
+  "scripts": {
+    "clean": "rmdir /s /q build",
+    "clean-prod": "rmdir /s /q distribution",
+    "compile-build": "babel dev --out-dir build",
+    "compile-prod": "babel dev --out-dir distribution",
+    "webpack-prod":"webpack -p --progress --colors --config webpack.production.config.js",
+    "start-prod": "npm run clean-prod && set NODE_ENV=production&& npm run compile-prod && npm run webpack-prod && npm run server-prod",
+    "start": "npm run clean && npm run compile-build && npm run server",    
+    "server-dev": "node lib/servers/webpack.js",
+    "server": "node build/server.js",
+    "server-prod": "node distribution/server.js",
+    "deploy": "npm run clean-prod && SET NODE_ENV=production&& npm run compile-prod && npm run webpack-prod",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dindaleon/BaseReactJS.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "boilerplate",
+    "hot",
+    "reload",
+    "hmr",
+    "live",
+    "edit",
+    "webpack"
+  ],
+  "author": "Dindaleon <no@mail.com> (http://github.com/Dindaleon)",
+  "license": "No license",
+  "bugs": {
+    "url": "https://github.com/Dindaleon/BaseReactJS/issues"
+  },
+  "homepage": "https://github.com/Dindaleon/BaseReactJS",
+  "devDependencies": {
+    "babel-core": "^5.6.18",
+    "babel-eslint": "^3.1.23",
+    "babel-loader": "^5.3.1",
+    "eslint-plugin-react": "^2.7.0",
+    "express": "^4.13.1",
+    "http": "0.0.0",
+    "http-proxy": "^1.11.1",
+    "jade": "^1.11.0",
+    "json-loader": "^0.5.2",
+    "node-jsx": "^0.13.3",
+    "react-engine": "^1.7.0",
+    "react-hot-loader": "^1.2.8",
+    "webpack": "^1.10.1",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "dependencies": {
+    "react": "^0.13.3",
+    "react-router": "^0.13.3"
+  }
+}
