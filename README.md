@@ -10,3 +10,20 @@ This is a basic starter pack for developing react apps. It is based on the follo
 - **React-router** (router)
 - **Webpack** (module bundler)
 - **Babel** (compiler for ES6 and .jsx)
+
+### Install
+    ~ git clone https://github.com/Dindaleon/BaseReactJS.git
+    ~ npm install
+  
+### Run
+*starts development server with Hot Module enabled on port: 3000*
+
+    ~ npm start
+
+*starts production server on port: 5000*
+
+    ~ npm run start-prod
+
+*compiles into distribution package ready for deployment*
+
+    ~ npm deploy
